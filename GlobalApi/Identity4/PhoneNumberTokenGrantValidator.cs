@@ -101,7 +101,7 @@ namespace GlobalApi
 
             //var user =await _userManager.Users.Include(x => x.UserName).FirstOrDefaultAsync(x => x.UserName == _userManager.NormalizeName(username));
 
-            var rolepermission = await db.RoleClaims.Where(x => x.RC_RoleId_FK == user.Role_Id_FK).Select(x => x.RC_RoleId_FK).CountAsync();
+            //var rolepermission = await db.RoleClaims.Where(x => x.RC_RoleId_FK == user.Role_Id_FK).Select(x => x.RC_RoleId_FK).CountAsync();
 
             var Role = await db.Roles.FirstOrDefaultAsync(x => x.Id == user.Role_Id_FK);
 
